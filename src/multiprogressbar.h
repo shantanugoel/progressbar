@@ -37,7 +37,6 @@ class MultiProgressBar {
   void Update(size_t bar, float value, std::ostream& os = std::cout) {
     assert(bar < N);
     bars_[bar].SetProgress(value);
-    // bars_[bar].WriteProgress(os_[bar]);
     if (first_update_) {
       first_update_ = false;
     } else {
@@ -59,7 +58,6 @@ class MultiProgressBar {
  private:
   ProgressBar bars_[N];
   bool first_update_ = true;
-  // std::ostream os_[N];
 };
 
 #endif  // MULTI_PROGRESS_BAR_H_
