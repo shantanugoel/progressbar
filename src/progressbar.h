@@ -1,3 +1,5 @@
+#ifndef PROGRESS_BAR_H_
+#define PROGRESS_BAR_H_
 #include <atomic>
 #include <iostream>
 #include <mutex>
@@ -60,3 +62,5 @@ class ProgressBar {
   size_t bar_width_{60};
   std::string fill_{"#"}, remainder_{" "}, status_text_{""};
 };
+
+#endif  // PROGRESS_BAR_H_
